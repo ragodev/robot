@@ -8,7 +8,7 @@ const int PIN_LEFT_ENGINE_SPEED = 6;
 const int PIN_RIGHT_ENGINE_1 = 5;
 const int PIN_RIGHT_ENGINE_2 = 4;
 const int PIN_RIGHT_ENGINE_SPEED = 11;
-const int motorFart = 254;
+const int ENGINE_SPEED = 254;
 
 const int PIN_PING_TRIGGER = 19;
 const int PIN_PING_ECHO = 18;
@@ -56,19 +56,19 @@ void loop() {
 }
 
 void drive(void) {
-      analogWrite(PIN_LEFT_ENGINE_SPEED, motorFart);
+      analogWrite(PIN_LEFT_ENGINE_SPEED, ENGINE_SPEED);
       digitalWrite(PIN_LEFT_ENGINE_1, LOW);
       digitalWrite(PIN_LEFT_ENGINE_2, HIGH);
-      analogWrite(PIN_RIGHT_ENGINE_SPEED, motorFart);
+      analogWrite(PIN_RIGHT_ENGINE_SPEED, ENGINE_SPEED);
       digitalWrite(PIN_RIGHT_ENGINE_1, LOW);
       digitalWrite(PIN_RIGHT_ENGINE_2, HIGH);
 }
 
 void reverse(void) {
-      analogWrite(PIN_LEFT_ENGINE_SPEED, motorFart);
+      analogWrite(PIN_LEFT_ENGINE_SPEED, ENGINE_SPEED);
       digitalWrite(PIN_LEFT_ENGINE_1, HIGH);
       digitalWrite(PIN_LEFT_ENGINE_2, LOW);
-      analogWrite(PIN_RIGHT_ENGINE_SPEED, motorFart);
+      analogWrite(PIN_RIGHT_ENGINE_SPEED, ENGINE_SPEED);
       digitalWrite(PIN_RIGHT_ENGINE_1, HIGH);
       digitalWrite(PIN_RIGHT_ENGINE_2, LOW);
 }
