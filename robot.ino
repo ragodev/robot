@@ -122,3 +122,13 @@ void turnRight(void) {
       digitalWrite(PIN_RIGHT_ENGINE_1, LOW);
       digitalWrite(PIN_RIGHT_ENGINE_2, HIGH);
 }
+
+int pingMedelvarde(void) {
+      int total = 0;
+
+      for (int i = 0; i < 5; i++) {
+            total += myPing.ping_cm();
+      }
+
+      return total / 5;
+}
